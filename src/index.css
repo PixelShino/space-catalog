@@ -1,0 +1,123 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #000;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Скрываем стандартный курсор только на десктопе */
+@media (min-width: 769px) {
+  .custom-cursor-active * {
+    cursor: none !important;
+  }
+}
+
+/* На мобильных устройствах оставляем стандартный курсор */
+@media (max-width: 768px) {
+  .custom-cursor-active * {
+    cursor: auto;
+  }
+}
+
+/* Стили для скроллбара */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #1a1a1a;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #3b82f6;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #2563eb;
+}
+
+/* Анимации для элементов */
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+/* Стили для карточек */
+.card-hover {
+  transition: all 0.3s ease;
+}
+
+.card-hover:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px -5px rgba(59, 130, 246, 0.3);
+}
+
+/* Градиентные тексты */
+.gradient-text {
+  @apply bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-600;
+}
+
+/* Стили для кнопок */
+.btn {
+  @apply px-4 py-2 rounded transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-900;
+}
+
+.btn-primary {
+  @apply bg-blue-600 text-white hover:bg-blue-700 focus:ring-blue-500;
+}
+
+.btn-secondary {
+  @apply bg-gray-700 text-gray-300 hover:bg-gray-600 focus:ring-gray-500;
+}
+
+.btn-danger {
+  @apply bg-red-600 text-white hover:bg-red-700 focus:ring-red-500;
+}
+
+/* Стили для форм */
+input, textarea, select {
+  @apply transition-all duration-200;
+}
+
+input:focus, textarea:focus, select:focus {
+  @apply ring-2 ring-blue-500 border-transparent;
+}
+
+/* Анимация для загрузки */
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+.animate-pulse {
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
