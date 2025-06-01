@@ -21,7 +21,11 @@
 
 ## 🚀 Демонстрация
 
-![Космический каталог](https://via.placeholder.com/800x400?text=Космический+Каталог)
+![Image](https://github.com/user-attachments/assets/3ef8927d-6a44-48c9-bcfc-fce17ae3e571)
+
+![Image](https://github.com/user-attachments/assets/da4269f6-6bf9-4ac9-8077-d80023d9939f)
+
+![Image](https://github.com/user-attachments/assets/3ba1dae5-d4d6-4087-bdde-56692a98e3c7)
 
 ## ✨ Функциональность
 
